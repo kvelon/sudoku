@@ -1,0 +1,10 @@
+(library
+  (name sudoku)
+  (inline_tests)                
+  (preprocess (pps ppx_inline_test ppx_expect))
+  (wrapped false)
+  (libraries ysc2229)
+  (synopsis "Solving sudoku"))
+
+(env
+ (release (inline_tests enabled)))
