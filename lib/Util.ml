@@ -43,7 +43,29 @@ let is_min ls min =
 let print_offset _ = 
   Printf.printf "  "
 
+(* Comparison function for increasing numbers *)
+
 let inc_cmp x y = 
   if x > y then 1
   else if x < y then -1
   else 0
+
+(* Printing a sub-array of elements *)
+
+let print_int_sub_array l u arr =
+  assert (l <= u);
+  assert (u <= Array.length arr);
+  Printf.printf "[| ";
+  for i = l to u - 1 do
+    Printf.printf "%d" arr.(i);
+    if i < u - 1
+    then Printf.printf "; "
+    else ()      
+  done;
+  Printf.printf " |] "
+
+(* Print the entire array *)
+
+let print_int_array arr = 
+  let len = Array.length arr in
+  print_int_sub_array 0 len arr
