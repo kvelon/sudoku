@@ -3,6 +3,7 @@
   (inline_tests)                
   (preprocess (pps ppx_inline_test ppx_expect))
   (wrapped false)
+  (libraries core batteries graphics)
   (synopsis "YSC2229 Libraries"))
 
 (env

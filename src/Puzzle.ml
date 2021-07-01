@@ -60,7 +60,6 @@ let puzzle_complete (p : puzzle) =
                 square_complete p r c;
     i := !i + 1
   done; 
-  print_int !i;
   !complete  
 
 (***********************)
